@@ -1,0 +1,27 @@
+.about-section {
+  padding-top: 10rem;
+  background: linear-gradient(to bottom, $black 0%,#{fade-out($black, .1)} 75%,#{fade-out($black, .2)} 100%);
+  p {
+    margin-bottom: 5rem;
+  }
+  h1 {
+    margin-bottom: 2rem;
+  }
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 1rem;
+      position: relative;
+      &:before {
+        position: absolute;
+        content: '';
+        top: 6px;
+        left: -23px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid $white-trans-75;
+      }
+    }
+  }
+}
