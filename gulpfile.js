@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
+var sourcemaps = require('gulp-sourcemaps');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
@@ -51,12 +52,14 @@ gulp.task('vendor', function() {
 // Compile SCSS
 gulp.task('css:compile', function() {
   return gulp.src('./scss/**/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass.sync({
       outputStyle: 'expanded'
     }).on('error', sass.logError))
     .pipe(header(banner, {
       pkg: pkg
     }))
+    .pipe(sourcemaps.write())    
     .pipe(gulp.dest('./css'))
 });
 

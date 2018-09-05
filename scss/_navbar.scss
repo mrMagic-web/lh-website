@@ -15,6 +15,8 @@
     color: $black;
     font-weight: 700;
     padding: .9rem 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
   }
   .navbar-nav {
     .nav-item {
@@ -39,15 +41,12 @@
     .navbar-brand {
       padding: .5rem 0;
       font-size: 1.5rem;
-      color: fade-out($white, .3);
+      color: fade-out($white, .1);
     }
     .nav-link {
       transition: none;
       padding: 2rem 1.5rem;
-      color: fade-out($white, .3);
-      &:hover {
-        color: fade-out($white, .1);
-      }
+      color: fade-out($white, .1);
       &:active {
         color: white;
       }
