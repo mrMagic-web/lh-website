@@ -11,6 +11,14 @@
       outline: none;
     }
   }
+  .dropdown-menu {
+    border: none;
+    padding: 0;
+    min-width: 5rem;
+    .dropdown-item{
+      padding: 0.3rem 0;
+    }
+  }
   .navbar-brand {
     color: $black;
     font-weight: 700;
@@ -73,5 +81,10 @@
         }
       }
     }
+    .dropdown-menu {
+      margin-top: -20px;
+      text-align: center;
+    }
   }
+
 }
